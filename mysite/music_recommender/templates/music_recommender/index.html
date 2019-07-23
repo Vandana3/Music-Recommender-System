@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<meta content="noindex, nofollow" name="robots">
+{% load static %}
+<link href="{% static "css/loginSignup.css" %}" rel="stylesheet">
+{% load static %}
+<script src="{% static "js/jquery-3.2.1.js" %}"></script>
+{% load static %}
+<script src="{% static "js/loginSignup.js" %}"></script>
+</head>
+<body>
+<h2>Music Recommender</h2>
+{{message}}
+<div id="main">
+<!-- Create Div First For Login Form -->
+<div id="first">
+<form action="{% url 'login'%}" method="post" name="login">
+{% csrf_token %}
+<h3>Login</h3>
+<input id="loginusername" name="loginusername" placeholder="Username" type="text">
+<input id="loginpassword" name="loginpassword" placeholder="Password" type="password">
+<input id="login" type="submit" value="Login">
+<p id="two">New User? <a class="signup" href="#" id="signup">Sign up here</a></p>
+</form>
+</div>
+<!-- Create Div Second For Signup Form-->
+<div id="second">
+<form action="{% url 'signup'%}" method="post" name="signup">
+{% csrf_token %}
+<h3>Signup</h3>
+<input id="name" name="fullname" placeholder="Full Name" type="text">
+<input id="registerusername" name="registerusername" placeholder="Username" type="text">
+<input id="registeremail" name="registeremail" placeholder="Email" type="text">
+<input id="registerpassword" name="registerpassword" placeholder="Password" type="password">
+<input id="register" type="submit" value="Sign Up">
+<p id="two">Have an account? <a class="signin" href="#" id="signin">Log in</a></p>
+</form>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Popular Songs</title>
+{% load static %}
+<link href="{% static "css/songtable.css" %}" rel="stylesheet">
+</head>
+<body>
+<h3>Recommendations Based On Popularity</h3>
+<table class="songtable">
+<thead>
+<tr>
+<th colspan="2" >Popular Songs</th>
+</tr>
+<tr>
+	<th>Title</th>
+	<th>Artist</th>
+</tr>
+</thead>
+<tbody>
+{% for s in songs %}
+	<tr>
+		<td>{{ s.song }}</td>
+		<td>{{ s.artist }}</td>
+	</tr>
+{% endfor %}
+</tbody>
+</tr>
+</table>
+</body>
+</html>

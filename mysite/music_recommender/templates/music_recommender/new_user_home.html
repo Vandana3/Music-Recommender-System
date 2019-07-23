@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome</title>
+</head>
+<body>
+{% load static %}
+<link href="{% static "css/songtable.css" %}" rel="stylesheet">
+{% load static %}
+<span class="logout"><a href="{% url 'home' %}"><img class = "logout" src="{% static "logout.png" %}"></a></span>
+<h3>Welcome, {{user.username}}</h3>
+<div class = "popular">
+	<p>
+		{% load static %}
+		<a href="{% url 'popular_music' user.user_id %}" target="_blank"><img class="links" src="{% static "popular.png" %}"></a>
+	</p>
+</div>
+</body>
+</html>

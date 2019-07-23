@@ -1,0 +1,10 @@
+user_id,fullname,username,email,password
+8972,gon,gon,gon@gon.com,gon
+40,jin,jin,gin@gin.com,jin123
+65,lisa,lisa,lisa@gmail.com,lisa123
+4,bucky,bucky,bucky@gmail.com,bucky123
+77,jackson,jackson,jack@gmail.com,jack123
+9409,Robert,robert,robert@gmail.com,rob123
+3397,Chen,chen,chen@gmail.com,chen123
+3023,vandana,vandu,van@gmail.com,van123
+5487,swati,joshi,swati@gmail.com,swati123

@@ -1,0 +1,76 @@
+h3{
+      color: #387094;
+    font-family: Verdana, Geneva, sans-serif;
+    font-style: italic;
+    font-size: 22px;
+    padding-left: 100px;
+    padding-top: 20px;
+}
+div.popular{
+  margin: auto;
+  width: 350px;
+  padding-left: 60px;
+}
+div.three{
+  width: 300px;
+  float: left;
+}
+div.containerdiv{
+    width: 900px;
+    margin: auto;
+    padding-top: 25px;
+}
+span.logout{
+  float: right;
+  padding: 20px;
+}
+img.logout{
+  height: 40px;
+  width: 40px;
+}
+
+img.links:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+table.songtable {
+  font-family: Verdana, Geneva, sans-serif;
+  border: 1px solid #dce3ec8a;
+  width: 40%;
+  text-align: center;
+  margin: auto;
+}
+table.songtable td, table.songtable th {
+  /*border: 1px solid #AAAAAA;*/
+  padding: 3px 2px;
+}
+table.songtable tbody td {
+  font-size: 14px;
+}
+table.songtable tr:nth-child(even) {
+  background: linear-gradient(to bottom,#4bc1f72b 5%,#6edbf75e 100%);
+}
+
+table.songtable thead th {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border-left: 2px solid #F5F5F5;
+}
+table.songtable thead th:first-child {
+  border-left: none;
+}
+
+table.songtable tfoot td {
+  font-size: 14px;
+}
+table.songtable tfoot .links {
+  text-align: right;
+}
+table.songtable tfoot .links a{
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}

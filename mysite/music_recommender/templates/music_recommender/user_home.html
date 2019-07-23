@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome</title>
+{% load static %}
+<link href="{% static "css/songtable.css" %}" rel="stylesheet">
+</head>
+<body>
+<div>
+{% load static %}
+<span class="logout"><a href="{% url 'home' %}"><img class = "logout" src="{% static "logout.png" %}"></a></span>
+<h3>Welcome, {{user.username}}</h3>
+
+<table class="songtable">
+<thead>
+<tr>
+<th colspan="2" >Previously Listened</th>
+</tr>
+<tr>
+	<th>Title</th>
+	<th>Artist</th>
+</tr>
+</thead>
+<tbody>
+{% for s in songs %}
+	<tr>
+		<td>{{ s.song }}</td>
+		<td>{{ s.artist }}</td>
+	</tr>
+{% endfor %}
+</tbody>
+</tr>
+</table>
+</div>
+<div class = "containerdiv">
+<div class="three">
+	<p>
+		{% load static %}
+		<a href="{% url 'popular_music' user.user_id %}" target="_blank"><img class="links" src="{% static "popular.png" %}"></a>
+	</p>
+</div>
+<div class="three">
+	<p>
+		{% load static %}
+		<a href="{% url 'cf' user.user_id %}" target="_blank"><img class="links" src="{% static "cf.png" %}"></a>
+	</p>
+</div>
+<div class="three">
+	<p>
+		{% load static %}
+		<a href="{% url 'genre' user.user_id %}" target="_blank"><img class="links" src="{% static "genre.png" %}"></a>
+	</p>
+</div>
+</div>
+</body>
+</html>

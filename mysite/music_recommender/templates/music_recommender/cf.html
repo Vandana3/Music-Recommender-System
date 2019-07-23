@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recommended Music</title>
+{% load static %}
+<link href="{% static "css/songtable.css" %}" rel="stylesheet">
+</head>
+<body>
+<h3>Recommendations Based On Item based CF</h3>
+<table class="songtable">
+<thead>
+<tr>
+<th colspan="4">Recommendations</th>
+</tr>
+<tr>
+	<th>Title</th>
+	<th>Artist</th>
+	<th>Recommended Song</th>
+	<th>Artist</th>
+</tr>
+</thead>
+<tbody>
+{% for s in songs %}
+	<tr>
+		<td rowspan="{{ s.recommendations|length }}">{{ s.song }}</td>
+		<td rowspan="{{ s.recommendations|length }}">{{ s.artist }}</td>
+		<td>{{ s.recommendations.0.rec_song }}</td>
+		<td>{{ s.recommendations.0.rec_artist }}</td>
+	</tr>
+	{%  for r in s.recommendations %}
+		{% if not forloop.first %}
+		<tr>
+			<td>{{ r.rec_song }}</td>
+			<td>{{ r.rec_artist }}</td>
+		</tr>
+		{% endif %}
+	{% endfor %}
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>
